@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MiamBox</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0c1c35">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="splash">
+<svg viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="800" fill="#0c1c35"/>
+  <polygon points="0,0 400,0 400,137.8 106,346.5 0,282" fill="#fff"/>
+  <polygon points="400,700 400,800 170,800" fill="#fff"/>
+  <image href="logo-split.png" x="116.5" y="221.2" width="166.75" height="157.55"/>
+  <text x="200" y="440" text-anchor="middle" fill="#fff" font-size="40" font-weight="300" font-family="Montserrat,Segoe UI,system-ui,sans-serif">Miam<tspan font-weight="400">Box</tspan></text>
+  <text x="200" y="470" text-anchor="middle" fill="#fff" font-size="12" font-family="Montserrat,Segoe UI,system-ui,sans-serif">« Chaque recette, un instant de plaisir. »</text>
+  <g transform="translate(200 520)" stroke="#fff" stroke-width="3" stroke-linecap="round">
+    <g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="1s" repeatCount="indefinite"/>
+    <line y1="-14" y2="-8" opacity="1"/><line y1="-14" y2="-8" opacity=".85" transform="rotate(45)"/><line y1="-14" y2="-8" opacity=".7" transform="rotate(90)"/><line y1="-14" y2="-8" opacity=".55" transform="rotate(135)"/><line y1="-14" y2="-8" opacity=".4" transform="rotate(180)"/><line y1="-14" y2="-8" opacity=".3" transform="rotate(225)"/><line y1="-14" y2="-8" opacity=".2" transform="rotate(270)"/><line y1="-14" y2="-8" opacity=".12" transform="rotate(315)"/></g>
+  </g>
+</svg>
+</div>
+<div id="app"></div>
+<nav class="nav" id="nav"></nav>
+<script src="app.js"></script>
+<script>
+if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) {
+  navigator.serviceWorker.register("sw.js").catch(function () {});
+}
+</script>
+</body>
+</html>
